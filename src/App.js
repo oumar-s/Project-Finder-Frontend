@@ -1,8 +1,10 @@
 import './App.css';
+import AllProjectsContainer from './components/containers/allProjectsContainer'
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <AllProjectsContainer />
+    
   );
 }
 

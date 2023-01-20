@@ -6,7 +6,7 @@ const axios = require('axios');
 //All projects 
 export const fetchAllProjectsThunk = () => async (dispatch) => {
     try {
-        let res = await axios.get('/projects');
+        let res = await axios.get('/api/projects');
         dispatch(ac.fetchAllProjects(res.data));
     } catch(err) {
         console.error(err);

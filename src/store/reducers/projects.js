@@ -1,7 +1,7 @@
 import * as at from '../actions/actionTypes';
 
 const allProjects = (state = [], action) => {
-    switch(at.type) {
+    switch(action.type) {
         case at.FETCH_ALL_PROJECTS:
             return action.payload;
         default: 
