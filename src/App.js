@@ -1,9 +1,14 @@
 import './App.css';
 import AllProjectsContainer from './components/containers/allProjectsContainer'
+import Navbar from './components/containers/navbar';
 
 function App() {
   return (
-    <AllProjectsContainer />
+    <>
+      <Navbar />
+      <AllProjectsContainer />
+    </>
+    
     
   );
 }
