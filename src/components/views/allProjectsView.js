@@ -6,17 +6,21 @@ const AllProjectsView = (props) => {
 
     return (
         <div>
-            <ul>
-                {
-                    props.allProjects.map((project) => {
+            <ul className="container">
+                <div className="row">
+                   
+                    {props.allProjects.map((project) => {
                         return (
-                            <div key={project.id}>
+                            <div key={project.id} className='col-sm-4'>
                                 <h1>{project.title}</h1>
                                 <p>{project.description}</p>
                             </div>
                         )
                     })
                 }
+                
+                </div>
+                
             </ul>
         </div>
     )
