@@ -12,6 +12,7 @@ class AllProjectsContainer extends Component {
 
   render() {
     return (
+     
       <AllProjectsView allProjects={this.props.allProjects} />
     )
   }
