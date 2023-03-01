@@ -1,4 +1,4 @@
-const PostFormView = (props) => {
+const AddProjectFormView = (props) => {
 
     const {handleChange, handleSubmit} = props;
     return (
@@ -21,4 +21,4 @@ const PostFormView = (props) => {
 
 }
 
-export default PostFormView;
+export default AddProjectFormView;

@@ -3,9 +3,9 @@ import { Component } from "react";
 import { Connect } from "react-redux";
 //import {redirect} from "react-router-dom"
 
-import PostFormView from "../views/postFormView";
+import AddProjectFormView from "../views/addProjectFormView";
 //import thunk
-class  PostFormContainer extends Component {
+class  AddProjectFormContainer extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -15,7 +15,7 @@ class  PostFormContainer extends Component {
     }
 
     //This event handler keeps track of changes as the user fills out the form.
-    //this event handler will be passed to the PostFormView as a prop.
+    //this event handler will be passed to the AddProjectFormView as a prop.
     handleChange = event => {
         this.setState({
             [event.target.name]: event.target.value
