@@ -2,7 +2,13 @@
 
 
 #Todo
+
+##General
 - move footer and nav to view   
+
+##postFormContainer
+- Add redirect and error
+
 
 # Getting Started with Create React App
 
