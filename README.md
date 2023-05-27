@@ -1,5 +1,15 @@
 # Project-Finder-Frontend
 
+
+#Todo
+
+##General
+- move footer and nav to view   
+
+##addProjectFormContainer
+- Add redirect and error
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

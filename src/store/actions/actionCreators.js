@@ -7,3 +7,12 @@ export const fetchAllProjects = (projects) => {
         payload: projects
     };
 };
+
+//addProject
+export const addProject = (project) => {
+    return{
+        type: at.ADD_PROJECT,
+        payload: project
+    };
+};
+
