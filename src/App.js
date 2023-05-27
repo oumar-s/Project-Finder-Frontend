@@ -2,18 +2,16 @@ import './App.css';
 import AllProjectsContainer from './components/containers/allProjectsContainer'
 import Navbar from './components/containers/navbar';
 import Footer from './components/containers/footer';
-import AddProjectFormView from './components/views/addProjectFormView';
+import AddProjectFormContainer from './components/containers/addFormContainer';
 
 function App() {
   return (
-    < AddProjectFormView />
-
-    /*
     <div >
         <Navbar />
+        <AddProjectFormContainer />
         <AllProjectsContainer />
         <Footer />
-    </div> */
+    </div> 
   
   );
 }
