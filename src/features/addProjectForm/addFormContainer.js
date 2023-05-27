@@ -2,7 +2,7 @@ import { Component } from "react";
 import { connect } from "react-redux";
 //import {redirect} from "react-router-dom"
 
-import AddProjectFormView from "../views/addProjectFormView";
+import AddProjectFormView from "./addProjectFormView";
 import { addProjectThunk } from "../../store/thunks";
 
 class AddProjectFormContainer extends Component {

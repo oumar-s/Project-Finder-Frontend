@@ -2,7 +2,7 @@ import { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { fetchAllProjectsThunk } from "../../store/thunks";
-import AllProjectsView from "../views/allProjectsView";
+import AllProjectsView from "./allProjectsView";
 
 class AllProjectsContainer extends Component {
   componentDidMount() {
