@@ -1,15 +1,15 @@
 import './App.css';
-import AllProjectsContainer from '../features/allProjects/allProjectsContainer'
+import {ProjectsContainer} from '../features/project/allProjects/allProjectsContainer'
 import Navbar from '../common/navbar';
 import Footer from '../common/footer';
-import AddProjectFormContainer from '../features/addProjectForm/addFormContainer';
+import {AddProjectFormContainer} from '../features/project/addProjectForm/addFormContainer';
 
 function App() {
   return (
     <div >
         <Navbar />
         <AddProjectFormContainer />
-        <AllProjectsContainer />
+        <ProjectsContainer />
         <Footer />
     </div> 
   

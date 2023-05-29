@@ -1,10 +1,12 @@
-import { legacy_createStore, combineReducers, applyMiddleware } from "redux";
-import { createLogger } from "redux-logger";
-import thunk from "redux-thunk";
-import * as reducers from '../store/reducers'
+import { configureStore} from "@reduxjs/toolkit";
+import { apiSlice } from "../features/api/apiSlice";
+import projectsReducer from '../features/project/projectSlice'
 
-const rootReducer = combineReducers(reducers);
-const logger = createLogger({collapsed: true})
-const store = legacy_createStore(rootReducer, applyMiddleware(thunk, logger));
-
-export default store;
+export default configureStore({
+    reducer: {
+        projects: projectsReducer,
+        [apiSlice.reducerPath]: apiSlice.reducer
+    },
+    middleware: getDefaultMiddleware =>
+    getDefaultMiddleware().concat(apiSlice.middleware)
+})

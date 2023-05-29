@@ -1,7 +1,7 @@
-import { Component } from "react";
+/*import { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { fetchAllProjectsThunk } from "../../store/thunks";
+import { fetchAllProjectsThunk } from "../../../store/thunks";
 import AllProjectsView from "./allProjectsView";
 
 class AllProjectsContainer extends Component {
@@ -33,4 +33,4 @@ const mapDispatch = (dispatch) => {
 };
 
 // Export our store-connected container by default;
-export default connect(mapState, mapDispatch)(AllProjectsContainer);
+export default connect(mapState, mapDispatch)(AllProjectsContainer);*/
