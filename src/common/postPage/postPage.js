@@ -1,6 +1,6 @@
-import Navbar from '../containers/footer';
-import Footer from '../containers/navbar';
-import AddProjectFormContainer from '../containers/addFormContainer';
+import Navbar from '../footer';
+import Footer from '../navbar';
+import AddProjectFormContainer from '../../features/project/addProjectForm/addFormContainer';
 function PostPage() {
     return (
       <div >
