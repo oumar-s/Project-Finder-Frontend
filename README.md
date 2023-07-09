@@ -3,8 +3,10 @@
 
 #Todo
 
-##General
-- move footer and nav to view   
+- work on project page
+- Add ownerID and status columns to project table
+- add Membership table
+- create requests table
 
 ##addProjectFormContainer
 - Add redirect and error
