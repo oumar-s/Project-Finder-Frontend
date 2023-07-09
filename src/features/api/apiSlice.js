@@ -7,6 +7,9 @@ export const apiSlice = createApi({
     getAllProjects: builder.query({
       query: () => '/projects',
     }),
+    getProject: builder.query({
+      query: (projectId) => `projects/${projectId}`
+    }),
     addProject: builder.mutation({
         query: project => ({
             url: '/projects',
@@ -17,4 +20,4 @@ export const apiSlice = createApi({
   }),
 });
 
-export const { useGetAllProjectsQuery, useAddProjectMutation } = apiSlice;
+export const { useGetAllProjectsQuery, useGetProjectQuery, useAddProjectMutation } = apiSlice;

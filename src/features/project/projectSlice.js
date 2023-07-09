@@ -12,6 +12,9 @@ export const ProjectSlice = createSlice({
         },
         projectAdded: (state, action) => {
             return [...state, action.payload];
+        },
+        projectViewed: (state, action) => {
+            return action.payload;
         }
     }
 })

@@ -7,6 +7,8 @@ import LandingPage from '../pages/LandingPage';
 import LoginPage from '../pages/LoginPage';
 import SignUpPage from '../pages/SignUpPage';
 import PostPage from '../pages/PostPage';
+import ProjectPage from '../pages/ProjectPage';
+
 
 
 function App() {
@@ -68,15 +70,15 @@ function App() {
 						}
 					/> */}
 					<Route path="/logout" element={<LandingPage />} />
-					{/* <Route
-						path="/textbooks/:id"
+					<Route
+						path="/projects/:projectId"
 						element={
 							<PrivateRouteRequiresAuth>
 								{" "}
-								<ShowTextbookPage />{" "}
+								<ProjectPage />{" "}
 							</PrivateRouteRequiresAuth>
 						}
-					/> */}
+					/>
 				</Routes>
 			</Router>
 		</AuthProvider>
