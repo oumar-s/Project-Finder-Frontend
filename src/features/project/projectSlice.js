@@ -12,6 +12,9 @@ export const ProjectSlice = createSlice({
         },
         projectAdded: (state, action) => {
             return [...state, action.payload];
+        },
+        projectViewed: (state, action) => {
+            return action.payload;
         }
     }
 })
@@ -41,5 +44,5 @@ export const addProjectThunk = (project) => async (dispatch) => {
     }
   };
 
-export const {allProjects, projectAdded} = ProjectSlice.actions;
+export const {allProjects, projectAdded, projectViewed} = ProjectSlice.actions;
 export default ProjectSlice.reducer;

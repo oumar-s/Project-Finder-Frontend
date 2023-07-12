@@ -1,5 +1,3 @@
-import React, {useEffect} from "react";
-
 import { useGetAllProjectsQuery } from "../../api/apiSlice";
 import AllProjectsView from "./allProjectsView";
 

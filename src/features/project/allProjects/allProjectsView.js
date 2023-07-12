@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom"
 
 const AllProjectsView = (props) => {
     if(!props.allProjects.length){
@@ -12,7 +13,9 @@ const AllProjectsView = (props) => {
                     {props.allProjects.map((project) => {
                         return (
                             <div key={project.id} className='col-sm-4'>
-                                <h1>{project.projectTitle}</h1>
+                                <Link to={"/projects/" + project.id}>
+                                    <h1>{project.projectTitle}</h1>
+                                </Link>
                                 <p>{project.projectDescription}</p>
                             </div>
                         )
