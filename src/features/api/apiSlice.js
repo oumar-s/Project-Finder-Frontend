@@ -17,7 +17,17 @@ export const apiSlice = createApi({
             body: project
         })
     }),
+    addRequest: builder.mutation({
+      query: (projectId) => ({
+          url: `/requests/${projectId}`,
+          method: 'POST',
+          credentials: "include",
+				  headers: {
+					"Content-Type": "application/json"
+          }
+      })
+  }),
   }),
 });
 
-export const { useGetAllProjectsQuery, useGetProjectQuery, useAddProjectMutation } = apiSlice;
+export const { useGetAllProjectsQuery, useGetProjectQuery, useAddProjectMutation, useAddRequestMutation } = apiSlice;

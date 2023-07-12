@@ -44,5 +44,5 @@ export const addProjectThunk = (project) => async (dispatch) => {
     }
   };
 
-export const {allProjects, projectAdded} = ProjectSlice.actions;
+export const {allProjects, projectAdded, projectViewed} = ProjectSlice.actions;
 export default ProjectSlice.reducer;

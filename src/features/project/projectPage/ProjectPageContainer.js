@@ -1,10 +1,12 @@
 import ProjectPageView from "./ProjectPageView";
-import { useGetProjectQuery } from "../../api/apiSlice";
+import { useGetProjectQuery, useAddRequestMutation } from "../../api/apiSlice";
 import { useParams } from "react-router-dom";
 
 export function ProjectPageContainer() {
     let params = useParams();
   const { data, error, isLoading } = useGetProjectQuery(params.projectId);
+  const [addRequest, { requestIsLoading }] = useAddRequestMutation()
+  
 
   if (isLoading) {
     return <div>Loading projects...</div>;
@@ -14,9 +16,12 @@ export function ProjectPageContainer() {
     return <div>Error: {error.message}</div>;
   }
 
-  //console.log(data)
+  const handleJoin = async event => {
+    await addRequest(params.projectId);
+  }
+
   return (
-    <ProjectPageView project={data} />
+    <ProjectPageView project={data} joinHandler={handleJoin} />
   )
 }
   

@@ -7,6 +7,7 @@
 - Add ownerID and status columns to project table
 - add Membership table
 - create requests table
+    requesterId, projectId, ownerId, status
 
 ##addProjectFormContainer
 - Add redirect and error
