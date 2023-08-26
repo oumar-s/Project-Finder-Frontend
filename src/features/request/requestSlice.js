@@ -6,12 +6,6 @@ export const RequestSlice = createSlice({
         requests: []
     },
     reducers: {
-        requestAdded: (state, action) => {
-            return [...state, action.payload];
-        }
     }
 })
-
-
-export const {requestAdded} = RequestSlice.actions;
 export default RequestSlice.reducer;

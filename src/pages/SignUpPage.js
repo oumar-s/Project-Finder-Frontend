@@ -47,7 +47,7 @@ function SignUpPage() {
 			}
 		} catch (error) {
 			console.error("Server error while creating a new user", error);
-            console.log("\n data: \n", data);
+			console.log("\n data: \n", data);
 			setError(true);
 		}
 	};
@@ -57,10 +57,10 @@ function SignUpPage() {
 	return (
 		<>
 			<Navbar />
-			<div className="col-10 col-md-8 col-lg-7">
+			<div className="mx-auto my-5 col-10 col-md-8 col-lg-7">
 				{error && <ErrorAlert details={"Failed to save the content"} />}
 				<form onSubmit={signUp}>
-					<div className="form-row">
+					<div className="form-row my-3">
 						<input
 							type="text"
 							className="form-control"
@@ -71,7 +71,7 @@ function SignUpPage() {
 							autoFocus
 						/>
 					</div>
-					<div className="form-row">
+					<div className="form-row my-3">
 						<input
 							type="text"
 							className="form-control"
@@ -82,7 +82,7 @@ function SignUpPage() {
 							autoFocus
 						/>
 					</div>
-					<div className="form-row">
+					<div className="form-row my-3">
 						<input
 							type="email"
 							className="form-control"
@@ -105,7 +105,7 @@ function SignUpPage() {
 						/>
 					</div>
 					<div className="form-row">
-						<button type="submit" className="btn btn-primary">
+						<button type="submit" className="d-grid col-3 mx-auto my-4 btn btn-primary">
 							Sign Up
 						</button>
 					</div>

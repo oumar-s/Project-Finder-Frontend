@@ -1,14 +1,14 @@
-import { ProjectsContainer } from '../features/project/allProjects/allProjectsContainer'
+import { RequestsContainer } from '../features/request/RequestsContainer';
 import Navbar from '../common/navbar';
 import Footer from '../common/footer';
 
-export default function HomePage() {
+export default function RequestsPage() {
 
     return (
         <div >
             <Navbar />
 
-            <ProjectsContainer />
+            <RequestsContainer />
 
             <Footer />
         </div>

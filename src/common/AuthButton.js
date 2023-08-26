@@ -19,9 +19,9 @@ const AuthButton = () => {
   };
 
   return (
-    <div className="text-white">
-      Welcome! {auth.user.firstName}
-      <button className="btn btn-primary" onClick={logout}>
+    <div>
+      Welcome! {auth.user.firstName} 
+      <button className="btn btn-primary m-3" onClick={logout}>
         Logout
       </button>
     </div>

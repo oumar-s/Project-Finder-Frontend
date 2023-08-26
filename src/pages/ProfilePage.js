@@ -1,14 +1,14 @@
-import { ProjectsContainer } from '../features/project/allProjects/allProjectsContainer'
+import { ProfileContainer } from '../features/profile/profileContainer';
 import Navbar from '../common/navbar';
 import Footer from '../common/footer';
 
-export default function HomePage() {
+export default function ProfilePage() {
 
     return (
         <div >
             <Navbar />
 
-            <ProjectsContainer />
+            <ProfileContainer />
 
             <Footer />
         </div>
