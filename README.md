@@ -1,18 +1,5 @@
 # Project-Finder-Frontend
 
-
-#Todo
-
-- work on project page
-- Add ownerID and status columns to project table
-- add Membership table
-- create requests table
-    requesterId, projectId, ownerId, status
-
-##addProjectFormContainer
-- Add redirect and error
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

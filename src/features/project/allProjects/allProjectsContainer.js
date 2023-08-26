@@ -12,10 +12,9 @@ export function ProjectsContainer() {
     return <div>Error: {error.message}</div>;
   }
 
-  //console.log(data)
   return (
     <AllProjectsView allProjects={data} />
-  )
+  );
 }
   
   

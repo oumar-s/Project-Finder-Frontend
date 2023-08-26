@@ -8,19 +8,21 @@ import LoginPage from '../pages/LoginPage';
 import SignUpPage from '../pages/SignUpPage';
 import PostPage from '../pages/PostPage';
 import ProjectPage from '../pages/ProjectPage';
+import AccountPage from '../pages/AccountPage';
+import RequestsPage from '../pages/RequestsPage';
+import ProfilePage from '../pages/ProfilePage';
 
 
 
 function App() {
-  return (
-    <AuthProvider>
+	return (
+		<AuthProvider>
 			<Router>
 				<Routes>
 					<Route path="/" element={<LandingPage />} />
 					<Route path="/login" element={<LoginPage />} />
 					<Route path="/sign-up" element={<SignUpPage />} />
 					<Route path="/home" element={<HomePage />} />
-					{/* <Route path="/about-us" element={<AboutUsPage />} /> */}
 					<Route
 						path="/post"
 						element={
@@ -29,19 +31,19 @@ function App() {
 							</PrivateRouteRequiresAuth>
 						}
 					/>
-					{/* <Route
-						path="/request"
+					<Route
+						path="/account"
 						element={
 							<PrivateRouteRequiresAuth>
-								<RequestsPage />
+								<AccountPage />
 							</PrivateRouteRequiresAuth>
 						}
 					/>
-					<Route
-						path="/my-account"
+						<Route
+						path="/requests"
 						element={
 							<PrivateRouteRequiresAuth>
-								<MyAccountPage />
+								<RequestsPage />
 							</PrivateRouteRequiresAuth>
 						}
 					/>
@@ -53,22 +55,6 @@ function App() {
 							</PrivateRouteRequiresAuth>
 						}
 					/>
-					<Route
-						path="/edit-profile"
-						element={
-							<PrivateRouteRequiresAuth>
-								<EditProfilePage />
-							</PrivateRouteRequiresAuth>
-						}
-					/>
-					<Route
-						path="/settings"
-						element={
-							<PrivateRouteRequiresAuth>
-								<SettingsPage />
-							</PrivateRouteRequiresAuth>
-						}
-					/> */}
 					<Route path="/logout" element={<LandingPage />} />
 					<Route
 						path="/projects/:projectId"
@@ -82,9 +68,7 @@ function App() {
 				</Routes>
 			</Router>
 		</AuthProvider>
-    
-  
-  );
+	);
 }
 
 export default App;

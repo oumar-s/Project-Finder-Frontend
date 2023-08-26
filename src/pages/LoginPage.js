@@ -52,13 +52,13 @@ function LoginPage() {
   return (
     <>
       <Navbar />
-      <div className="col-10 col-md-8 col-lg-7">
-        <form onSubmit={login}>
+      <div className="mx-auto my-5 col-10 col-md-8 col-lg-7">
+        <form data-bs-theme="dark" onSubmit={login}>
           <div className="form-row">
             {errorMessage}
             <input
               type="email"
-              className="form-control"
+              className="form-control my-3"
               name="email"
               placeholder="Email"
               value={data.email}
@@ -72,12 +72,12 @@ function LoginPage() {
               value={data.password}
               onChange={fieldChanged("password")}
             />
-            <button type="submit" className="btn btn-primary ml-auto">
+            <button type="submit" className="btn btn-primary d-grid col-3 mx-auto my-4">
               Login
             </button>
           </div>
         </form>
-        <a href="/sign-up" style={{ textDecoration: "none" }}>Register now</a>
+        <a href="/sign-up" style={{ textDecoration: "none" }} className="d-grid col-3 mx-auto my-4 text-center">Register now</a>
       </div>
     </>
   );
