@@ -6,7 +6,7 @@ export function ProjectPageContainer() {
   let params = useParams();
   const { data, error, isLoading } = useGetProjectQuery(params.projectId);
   const {data: requests, isError, loading, isSuccess } = useGetMembersQuery(params.projectId)
-  const [addRequest, { requestIsLoading }] = useAddRequestMutation()
+  const [addRequest] = useAddRequestMutation()
   
 
   if (isLoading || loading) {

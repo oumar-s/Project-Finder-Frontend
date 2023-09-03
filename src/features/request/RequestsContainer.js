@@ -5,8 +5,8 @@ import { useState } from "react";
 export function RequestsContainer() {
   const { data: myProjectsData, error: myProjectsError, isSuccess: myProjectsIsSuccess, isLoading: myProjectsIsloading } = useGetMyRequestsQuery();
   const { data: otheProjectsData, error: otherProjectsError, isSuccess: otherProjectsIsSuccess, isLoading: otherProjectsIsLoading } = useGetOtherRequestsQuery();
-  const [approveRequest, { approveIsLoading }] = useApproveOtherRequestsMutation();
-  const [denyRequest, { denyIsLoading }] = useDenyOtherRequestsMutation()
+  const [approveRequest] = useApproveOtherRequestsMutation();
+  const [denyRequest] = useDenyOtherRequestsMutation()
 
   const [requests, setRequests] = useState([]);
   const [type, setType] = useState("default");
