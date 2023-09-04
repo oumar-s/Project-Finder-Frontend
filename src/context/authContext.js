@@ -2,7 +2,7 @@ import React, { useState, useEffect, createContext } from "react";
 
 const AuthContext = createContext();
 const { Provider } = AuthContext;
-const url = 'https://project-finder-backend-production.up.railway.app';
+const url = 'project-finder-backend-production.up.railway.app';
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(false);
 
