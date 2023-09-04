@@ -9,7 +9,7 @@ export function ProjectsContainer() {
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <div>Error! Try again: {error.message}</div>;
   }
 
   return (
