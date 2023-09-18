@@ -2,14 +2,14 @@ import React, { useState, useEffect, createContext } from "react";
 
 const AuthContext = createContext();
 const { Provider } = AuthContext;
-const url = 'https://project-finder-backend-production.up.railway.app';
+//const url = 'https://project-finder-backend-production.up.railway.app';
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(false);
 
   useEffect(() => {
     async function checkIfUserIsLoggedIn() {
       try {
-        let response = await fetch(`${url}/api/auth/login`);
+        let response = await fetch('https://project-finder-backend-production.up.railway.app/api/auth/login');
 
         if (!response.ok) {
           throw new Error("Unauthenticated");
@@ -31,7 +31,7 @@ const AuthProvider = ({ children }) => {
   }, []);
 
   const authenticate = async (email, password) => {
-    let response = await fetch(`${url}/api/auth/login`, {
+    let response = await fetch('https://project-finder-backend-production.up.railway.app/auth/signup', {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: {
@@ -50,7 +50,7 @@ const AuthProvider = ({ children }) => {
   };
 
   const signout = async () => {
-    let response = await fetch(`${url}/api/auth/logout`, {
+    let response = await fetch('https://project-finder-backend-production.up.railway.app/api/auth/logout', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
