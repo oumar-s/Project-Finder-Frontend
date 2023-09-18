@@ -26,7 +26,7 @@ function SignUpPage() {
 		let { firstName, lastName, email, password } = data;
 
 		try {
-			let response = await fetch("/api/auth/signup", {
+			let response = await fetch("https://project-finder-backend-production.up.railway.app/api/auth/signup", {
 				method: "POST",
 				credentials: "include",
 				headers: {
