@@ -33,10 +33,7 @@ const AuthProvider = ({ children }) => {
   const authenticate = async (email, password) => {
     let response = await fetch('https://project-finder-backend-production.up.railway.app/api/auth/login', {
       method: "POST",
-      body: JSON.stringify({ email, password }),
-      headers: {
-        "Content-Type": "application/json",
-      },
+      body: JSON.stringify({ email, password })
     });
 
     if (!response.ok) {
