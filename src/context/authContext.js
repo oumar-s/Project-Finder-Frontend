@@ -18,7 +18,7 @@ const AuthProvider = ({ children }) => {
         let fetchedUser = await response.json();
         setUser(fetchedUser);
       } catch (error) {
-        console.log("error")
+        console.log("Error: User not logged in.")
         setUser(false);
       }
     }
