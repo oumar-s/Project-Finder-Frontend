@@ -9,7 +9,10 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     async function checkIfUserIsLoggedIn() {
       try {
-        let response = await fetch('https://project-finder-backend-production.up.railway.app/api/auth/login');
+        let response = await fetch('https://project-finder-backend-production.up.railway.app/api/auth/login', {
+          method: 'GET',
+          credentials: 'include'
+        });
 
         if (!response.ok) {
           throw new Error("Unauthenticated");
@@ -33,6 +36,7 @@ const AuthProvider = ({ children }) => {
   const authenticate = async (email, password) => {
     let response = await fetch('https://project-finder-backend-production.up.railway.app/api/auth/login', {
       method: "POST",
+      credentials: 'include',
       body: JSON.stringify({ email, password }),
       headers: {
         "Content-Type": "application/json",
@@ -52,6 +56,7 @@ const AuthProvider = ({ children }) => {
   const signout = async () => {
     let response = await fetch('https://project-finder-backend-production.up.railway.app/api/auth/logout', {
       method: "POST",
+      credentials: 'include',
       headers: {
         "Content-Type": "application/json",
       },
