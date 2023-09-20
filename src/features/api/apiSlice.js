@@ -68,7 +68,11 @@ export const apiSlice = createApi({
       })
   }),
   getUser: builder.query({
-    query: () => '/auth/user',
+    query: () => ({
+      url: '/auth/user',
+      method: 'GET',
+      credentials: "include"
+    }),
   }),
 
   }),
