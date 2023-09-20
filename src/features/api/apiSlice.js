@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 //const url = 'https://project-finder-backend-production.up.railway.app'
 export const apiSlice = createApi({
   reducerPath: 'api',
-  baseQuery: fetchBaseQuery({ baseUrl: 'https://project-finder-backend-production.up.railway.app/api', credentials: 'include'}),
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://project-finder-backend-production.up.railway.app/api'}),
   tagTypes: ['otherRequest'],
   endpoints: (builder) => ({
     getAllProjects: builder.query({
