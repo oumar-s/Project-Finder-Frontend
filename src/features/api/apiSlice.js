@@ -38,7 +38,6 @@ export const apiSlice = createApi({
       query: (requestId) => ({
         url: `requests/approve/${requestId}`,
         method: 'POST',
-        credentials: "include",
         headers: {
         "Content-Type": "application/json"
         }
@@ -49,7 +48,6 @@ export const apiSlice = createApi({
       query: (requestId) => ({
         url: `requests/disapprove/${requestId}`,
         method: 'POST',
-        credentials: "include",
         headers: {
         "Content-Type": "application/json"
         }
@@ -61,7 +59,6 @@ export const apiSlice = createApi({
       query: (projectId) => ({
           url: `/requests/${projectId}`,
           method: 'POST',
-          credentials: "include",
 				  headers: {
 					"Content-Type": "application/json"
           }
