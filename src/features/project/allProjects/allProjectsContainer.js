@@ -2,7 +2,7 @@ import { useGetAllProjectsQuery } from "../../api/apiSlice";
 import AllProjectsView from "./allProjectsView";
 
 export function ProjectsContainer() {
-  const { data, error, isLoading } = useGetAllProjectsQuery();
+  const { data, isSuccess, error, isLoading } = useGetAllProjectsQuery();
 
   if (isLoading) {
     return <div>Loading projects...</div>;
@@ -11,10 +11,11 @@ export function ProjectsContainer() {
   if (error) {
     return <div>Error! Try again: {error.message}</div>;
   }
-
-  return (
-    <AllProjectsView allProjects={data} />
-  );
+   if(isSuccess){
+    return (
+      <AllProjectsView allProjects={data} />
+    );
+  }
 }
   
   
