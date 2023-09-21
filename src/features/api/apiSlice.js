@@ -7,7 +7,7 @@ export const apiSlice = createApi({
   endpoints: (builder) => ({
     getAllProjects: builder.query({
       query: () => '/projects',
-      providesTags: 'getProjects'
+      providesTags: ['getProjects']
     }),
     getProject: builder.query({
       query: (projectId) => `projects/${projectId}`
@@ -21,7 +21,7 @@ export const apiSlice = createApi({
             method: 'POST',
             body: project
         }),
-        invalidatesTags: 'getProjects'
+        invalidatesTags: ['getProjects']
     }),
     getMyRequests: builder.query({
       query: () => 'requests/myRequests'
