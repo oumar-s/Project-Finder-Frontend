@@ -40,6 +40,28 @@ export default function LandingPage() {
 					</div>
 				</div>
 				<h3 className="mx-auto p-2 my-5 w-50" >
+					Quick Start Guide
+				</h3>
+				<h6 className="mx-auto p-2 my-5 w-75">
+					Joining A Project
+				</h6>
+				<h6 className="mx-auto p-2 my-5">
+					Got to the home page.
+					Click on the project you want to join.
+					Click Join.
+					Wait for the project owner to approve.
+					You're In! 
+				</h6>
+				<h6 className="mx-auto p-2 my-5 w-75">
+					Posting A Project
+				</h6>
+				<h6 className="mx-auto p-2 my-5">
+					Got to the post page.
+					Enter some information about your project.
+					Click Post.
+					You're all set! 
+				</h6>
+				<h3 className="mx-auto p-2 my-5 w-50" >
 					Get Started Now!
 				</h3>
 				<div className="btns mx-auto p-2 my-5 w-50">
