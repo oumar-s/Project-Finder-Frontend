@@ -48,7 +48,7 @@ export default function LandingPage() {
 							<h6 className="text-bg-light mx-auto p-2 my-1 w-75">
 								Joining A Project
 							</h6>
-							<div>
+							<div className="text-start">
 								<p> 1. Go to the home page. </p>
 								<p> 2. Click on the project you want to join. </p>
 								<p> 3. Click Join. </p>
@@ -60,7 +60,7 @@ export default function LandingPage() {
 							<h6 className="text-bg-light mx-auto p-2 my-1 w-75">
 								Posting A Project
 							</h6>
-							<div className="">
+							<div className="text-start">
 								<p> 1. Got to the post page. </p>
 								<p> 2. Enter some information about your project. </p>
 								<p> 3. Click Post. </p>
