@@ -46,7 +46,7 @@ export default function LandingPage() {
 					<div class="row row-cols-2">
 						<div class="col">
 							<div className="text-start">
-								<h6 className="text-bg-light mx-auto p-2 my-1 w-75">
+								<h6 className="text-bg-light mx-auto p-2 my-1 text-center">
 									Joining A Project
 								</h6>
 								<p> 1. Go to the home page. </p>
@@ -58,7 +58,7 @@ export default function LandingPage() {
 						</div>
 						<div class="col">
 							<div className="text-start">
-								<h6 className="text-bg-light mx-auto p-2 my-1 w-75">
+								<h6 className="text-bg-light mx-auto p-2 my-1 text-center">
 									Posting A Project
 								</h6>
 								<p> 1. Got to the post page. </p>
