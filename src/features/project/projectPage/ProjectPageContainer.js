@@ -6,7 +6,7 @@ import { useState } from "react";
 
 
 export function ProjectPageContainer() {
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   let params = useParams();
   const [setJoined, joined] = useState(false);
   const { data, error, isLoading } = useGetProjectQuery(params.projectId);
