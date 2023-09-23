@@ -8,10 +8,10 @@ import { useState } from "react";
 export function ProjectPageContainer() {
   //const navigate = useNavigate();
   let params = useParams();
-  const [setJoined, joined] = useState(false);
+  const [buttonClicked, setButtonClicked] = useState(false);
   const { data, error, isLoading } = useGetProjectQuery(params.projectId);
   const {data: requests, isError, loading, isSuccess } = useGetMembersQuery(params.projectId)
-  const [addRequest, {isSuccess: isSuccessRequest, isLoading: isLoadingRequest, isError: isErrorRequest}] = useAddRequestMutation()
+  const [addRequest] = useAddRequestMutation()
   
 
   if (isLoading || loading) {
@@ -25,24 +25,26 @@ export function ProjectPageContainer() {
   
   
   
-
-  const handleJoin = async () => {
-    await addRequest(params.projectId);
-    if (isLoadingRequest) {
-      return <div>Sending Request...</div>;
-    }
   
-    if (isErrorRequest) {
-      return <div>Error Sending Request: {error.message}</div>;
-    }
-    if(isSuccessRequest){
-      setJoined(true);
-    }
+  const handleJoin = async () => {
+    setButtonClicked(true);
+    await addRequest(params.projectId);
+    // if (isLoadingRequest) {
+    //   return <div>Sending Request...</div>;
+    // }
+  
+    // if (isErrorRequest) {
+    //   return <div>Error Sending Request: {error.message}</div>;
+    // }
+    // if(isSuccessRequest){
+    //   setJoined(true);
+    // }
 
   }
+
   if(isSuccess)
   {return (
-    <ProjectPageView project={data} members={requests} joinHandler={handleJoin} isJoined = {joined} />
+    <ProjectPageView project={data} members={requests} joinHandler={handleJoin} buttonClicked = {buttonClicked} />
   )}
 }
   
