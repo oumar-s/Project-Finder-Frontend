@@ -12,17 +12,13 @@ const ProjectPageView = (props) => {
             
             {/* Conditional rendering based on the buttonClicked state */}
             {props.buttonClicked ? (
-                <button type="button" className="btn btn-success">
+                <button type="button" className="btn btn-success d-grid col-3 mx-auto my-4">
                     Request sent!
                 </button>) : (
                 <button type="button" className="btn btn-primary d-grid col-3 mx-auto my-4" onClick={props.joinHandler}>
                     Join
                 </button>
             )}
-
-
-
-            {/* <button type="button" onClick={props.joinHandler} className="btn btn-success d-grid col-3 mx-auto my-4" id="liveAlertBtn">Join</button> */}
         </div>
     )
 }

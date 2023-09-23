@@ -29,17 +29,6 @@ export function ProjectPageContainer() {
   const handleJoin = async () => {
     setButtonClicked(true);
     await addRequest(params.projectId);
-    // if (isLoadingRequest) {
-    //   return <div>Sending Request...</div>;
-    // }
-  
-    // if (isErrorRequest) {
-    //   return <div>Error Sending Request: {error.message}</div>;
-    // }
-    // if(isSuccessRequest){
-    //   setJoined(true);
-    // }
-
   }
 
   if(isSuccess)
